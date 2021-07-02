@@ -1,0 +1,26 @@
+.Registrarse{
+   width: 150px;
+    margin:auto;
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+    color:dark;
+    font-family:fantasy, 'Times New Roman', Times, serif;
+}
+.FormularioRegistro{
+    width: 350px;
+    border: 1px solid lightgray;
+    border-radius: 2.5px solid lightgray;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    .usuariofoto{
+        width:100px;
+        margin:auto;
+    }
+}
+
+ion-item{
+    margin-bottom: 10px;
+}

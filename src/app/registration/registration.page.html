@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons>
+      <ion-img src="../assets/logo.png"></ion-img>
+      <ion-row>
+        <ion-col>
+          <ion-img name="../assets/foto33.jpg"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-back-button [routerLink]="['/home']"></ion-back-button>
+          <ion-col>Regresar</ion-col></ion-col
+        >
+      </ion-row>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form
+    class="FormularioRegistro"
+    (ngSubmit)="Register()"
+    [formGroup]="credentials"
+  >
+    <ion-img class="usuariofoto" src="../assets/usuario.png"></ion-img>
+    <h1>Regístrate</h1>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="nombre"
+        required
+        formControlName="name"
+        name="nombre"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="apellido"
+        required
+        formControlName="firstname"
+        name="apellido"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Correo Electronico</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="correo"
+        required
+        formControlName="Email"
+        name="correo"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Direccion</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="direccion"
+        required
+        formControlName="Email"
+        name="direccion"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Genero</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="genero"
+        required
+        formControlName="Email"
+        name="genero"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input
+        required
+        type="number"
+        [(ngModel)]="edad"
+        required
+        formControlName="Email"
+        name="edad"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Ingresa tu Contraseña</ion-label>
+      <ion-input
+        required
+        [(ngModel)]="Password"
+        type="password"
+        required
+        formControlName="password"
+        name="Password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button
+          class="Registrarse"
+          type="submit"
+          color="danger"
+          expand="block"
+          >Registrarse</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

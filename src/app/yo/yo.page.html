@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons>
+      <ion-img src="../assets/logo.png"></ion-img>
+      <ion-menu-button slot="end"></ion-menu-button>
+      <ion-label>Menú</ion-label>
+      <ion-button color="dark" slot="end" [routerLink]="['/sesion']">
+        <ion-icon name="flower"></ion-icon>Home</ion-button
+      >
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>
+    <ion-icon class="icon" color="danger" name="person"></ion-icon>CONFIGURACIÓN
+    DE PERFIL
+  </h1>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input [(ngModel)]="name" name="name"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Apellido</ion-label>
+    <ion-input [(ngModel)]="apellido" name="apellido"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Correo Electronico </ion-label>
+    <ion-input [(ngModel)]="correo" name="correo"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Edad</ion-label>
+    <ion-input [(ngModel)]="edad" name="edad"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Dirección</ion-label>
+    <ion-input [(ngModel)]="direccion" name="direccion"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Género</ion-label>
+    <ion-input [(ngModel)]="genero" name="genero"> </ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-button
+        (click)="actualizar()"
+        class="Actualizar"
+        type="submit"
+        color="danger"
+        expand="block"
+        >Actualizar Datos</ion-button
+      >
+    </ion-col>
+  </ion-row>
+</ion-content>

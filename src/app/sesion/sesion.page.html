@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons>
+      <ion-img src="../assets/logo.png"></ion-img>
+      <ion-menu-button slot="end"></ion-menu-button>
+      <ion-label>Menú</ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar
+    showCancelButton
+    animated
+    [(ngModel)]="buscador"
+    name="buscador"
+    placeholder="Buscar"
+    (change)="buscar()"
+  ></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides [options]="slideOpts">
+    <ion-slide>
+      <img src="../assets/foto11.jpg" alt="" />
+    </ion-slide>
+    <ion-slide>
+      <img src="../assets/foto22.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img src="../assets/foto33.jpg" />
+    </ion-slide>
+  </ion-slides>
+
+  <h1>Estrenos Más Recientes</h1>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let pelicula of peliculas">
+        <ion-card class="cartapelicula">
+          <ion-card-header>
+            <ion-img class="fotopelicula" src="../assets/logo.png"></ion-img>
+            <ion-card-subtitle> {{pelicula.genre}}</ion-card-subtitle>
+            <ion-card-title>{{pelicula.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{pelicula.description}}<br />
+            GÉNERO:{{pelicula.genero}} <br />
+            DURACIÓN: {{pelicula.runTime}} <br />
+            DIRECTOR: {{pelicula.director}}<br />
+            PRODUCIDA POR: {{pelicula.productionCo}}<br />
+            ESTRENO : {{pelicula.releaseDate}}
+          </ion-card-content>
+          <ion-item>
+            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-button color="dark" fill="outline" slot="end"
+              >Ver detalles</ion-button
+            >
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

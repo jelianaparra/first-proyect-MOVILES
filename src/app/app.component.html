@@ -1,0 +1,37 @@
+<ion-app>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
+
+<ion-menu side="end" content-id="main" autoHide="true">
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-title color="danger">Tus Opciones</ion-title>
+        <ion-item routerLink="/yo">
+          <ion-icon name="person" color="danger" class="icon"></ion-icon>Editar
+          de Perfil
+        </ion-item>
+        <ion-item routerLink="/miscomentarios">
+          <ion-icon name="chatbubbles" color="danger" class="icon"></ion-icon
+          >Mis Comentarios
+        </ion-item>
+        <ion-item routerLink="/clase-a">
+          <ion-icon name="tennisball" color="danger" class="icon"></ion-icon
+          >Peliculas Clase A
+        </ion-item>
+        <ion-item routerLink="/clase-b">
+          <ion-icon name="planet" color="danger" class="icon"></ion-icon
+          >Peliculas Clase B
+        </ion-item>
+        <ion-item routerLink="/clase-c">
+          <ion-icon name="wine" color="danger" class="icon"></ion-icon>
+          Peliculas Clase C
+        </ion-item>
+        <ion-item (click)="cerrarSesion()" routerLink="/login">
+          <ion-icon name="moon" color="danger" class="icon"></ion-icon> Cerrar
+          Sesión
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>

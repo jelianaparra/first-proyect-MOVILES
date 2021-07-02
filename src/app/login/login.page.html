@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons>
+      <ion-img src="../assets/logo.png"></ion-img>
+      <ion-row>
+        <ion-col> <ion-img name="../assets/foto33.jpg"></ion-img></ion-col>
+        <ion-col>
+          <ion-back-button [routerLink]="['/registration']"></ion-back-button
+          ><ion-col>Regresar </ion-col></ion-col
+        >
+      </ion-row>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="loguearse" (ngSubmit)="login()" [formGroup]="credentials">
+    <ion-img class="usuariofoto" src="../assets/usuario.png"></ion-img>
+    <h1>Inicia Sesion</h1>
+    <ion-item lines="full">
+      <ion-label position="floating">Correo Electronico</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="correo"
+        name="correo"
+        formControlName="Email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input
+        required
+        type="password"
+        [(ngModel)]="Password"
+        name="password"
+        formControlName="password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="login" type="submit" color="danger" expand="block"
+          >ingresar</ion-button
+        >
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="contrasena">
+        <a [routerLink]="['/forgot-password']" class="small-text">
+          Olvidaste tu contraseña?
+        </a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
